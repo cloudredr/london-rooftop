@@ -14,7 +14,7 @@ This guide walks you through deploying the **ROOFTOP LONDON CAFE & RESTAURANT** 
    ```
 2. Create a new GitHub repository (e.g. `rooftop-london`) and push:
    ```bash
-   git remote add origin https://github.com/your-username/rooftop-london.git
+   git remote add origin https://github.com/cloudredr/london-rooftop.git
    git branch -M main
    git push -u origin main
    ```

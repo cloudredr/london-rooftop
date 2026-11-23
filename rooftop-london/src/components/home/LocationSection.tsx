@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, SectionHeading } from '@/components/ui';
 import { RESTAURANT_INFO } from '@/lib/constants';
-import { MapPin, Phone, MessageCircle, Clock, ExternalLink, Navigation } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Clock, Navigation } from 'lucide-react';
 
 export function LocationSection() {
   return (
@@ -9,22 +9,22 @@ export function LocationSection() {
       <Container>
         <SectionHeading
           title="Visit Rooftop London"
-          subtitle="Conveniently situated at Trisulia, Cuttack. An effortless escape for memorable dining."
+          subtitle="Conveniently situated at Trisulia, Cuttack. An effortless escape for memorable rooftop dining."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {/* Details Card */}
-          <div className="rounded-2xl bg-[#151515] border border-[#2A2A2A] p-8 flex flex-col justify-between space-y-6 shadow-xl">
+          <div className="rounded-2xl bg-[#141414] border border-[#2A2A2A] p-8 flex flex-col justify-between space-y-6 shadow-xl">
             <div className="space-y-6">
               <div>
                 <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#C8A66A] block mb-1">
                   Location & Address
                 </span>
-                <h3 className="font-heading text-xl font-bold text-[#F7F5F0]">
+                <h3 className="font-heading text-2xl font-bold text-[#F7F5F0]">
                   ROOFTOP LONDON
                 </h3>
-                <p className="text-xs text-[#C8A66A] uppercase tracking-wider">
-                  Cafe & Restaurant
+                <p className="text-xs text-[#C8A66A] uppercase tracking-wider mt-0.5">
+                  Cafe & Restaurant • Trisulia, Cuttack
                 </p>
               </div>
 
@@ -33,17 +33,18 @@ export function LocationSection() {
                   <MapPin className="w-5 h-5 text-[#C8A66A] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#F7F5F0] font-medium">Trisulia, Cuttack</p>
-                    <p className="text-xs text-[#888888]">{RESTAURANT_INFO.address}</p>
+                    <p className="text-xs text-[#888888] mt-0.5">{RESTAURANT_INFO.address}</p>
+                    <p className="text-[11px] text-[#C8A66A]/80 mt-1">Near Andhra Bank, Trisulia Bazar</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-[#C8A66A] shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-[#F7F5F0] font-medium">Direct Inquiries</p>
+                    <p className="text-[#F7F5F0] font-medium">Direct Telephone</p>
                     <a
                       href={`tel:${RESTAURANT_INFO.phoneRaw}`}
-                      className="text-xs text-[#C8A66A] hover:underline"
+                      className="text-xs text-[#C8A66A] hover:underline block mt-0.5"
                     >
                       {RESTAURANT_INFO.phone}
                     </a>
@@ -53,8 +54,8 @@ export function LocationSection() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-[#C8A66A] shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-[#F7F5F0] font-medium">Restaurant Hours</p>
-                    <p className="text-xs text-[#888888]">{RESTAURANT_INFO.openingHoursDisplay}</p>
+                    <p className="text-[#F7F5F0] font-medium">Opening Hours</p>
+                    <p className="text-xs text-[#888888] mt-0.5">{RESTAURANT_INFO.openingHoursDisplay}</p>
                   </div>
                 </div>
               </div>
@@ -66,7 +67,7 @@ export function LocationSection() {
                 href={RESTAURANT_INFO.googleMaps}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider bg-[#C8A66A] text-[#151515] hover:bg-[#d4b577] transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-[#C8A66A] text-[#151515] hover:bg-[#d4b577] transition-all shadow-md shadow-[#C8A66A]/20"
               >
                 <Navigation className="w-4 h-4" />
                 Get Driving Directions
@@ -76,7 +77,7 @@ export function LocationSection() {
                 href={`https://wa.me/${RESTAURANT_INFO.whatsapp}?text=Hello! I would like to enquire about visiting Rooftop London Cafe & Restaurant.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/10 transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl text-xs font-semibold uppercase tracking-wider border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/10 transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp Inquiry
@@ -85,12 +86,12 @@ export function LocationSection() {
           </div>
 
           {/* Embedded Google Map */}
-          <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-[#2A2A2A] shadow-2xl relative min-h-[380px]">
+          <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-[#2A2A2A] shadow-2xl relative min-h-[380px] bg-[#1a1a1a]">
             <iframe
               src={RESTAURANT_INFO.googleMapsEmbed}
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '380px' }}
+              style={{ border: 0, minHeight: '400px' }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

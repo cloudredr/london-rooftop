@@ -9,6 +9,9 @@ export function InstagramIcon({ className = 'w-4 h-4' }: { className?: string })
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      width="16"
+      height="16"
+      style={{ width: '16px', height: '16px' }}
       className={className}
     >
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />

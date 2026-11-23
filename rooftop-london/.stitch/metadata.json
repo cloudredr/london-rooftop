@@ -1,0 +1,51 @@
+{
+  "projectId": "14880444576187050178",
+  "title": "ROOFTOP LONDON CAFE & RESTAURANT",
+  "deviceType": "DESKTOP",
+  "lastSyncTime": "2026-11-23T11:15:00.000Z",
+  "designSystem": {
+    "name": "assets/8419130447518080623",
+    "displayName": "Rooftop London Luxury Gold & Charcoal",
+    "colors": {
+      "surface": "#121212",
+      "surfaceContainerLow": "#1A1A1A",
+      "surfaceContainerHigh": "#262626",
+      "primary": "#C8A66A",
+      "onPrimary": "#121212",
+      "secondary": "#F4EFE5",
+      "tertiary": "#202020",
+      "neutral": "#151515"
+    },
+    "fonts": {
+      "headline": "Cormorant Garamond, Playfair Display, serif",
+      "body": "Plus Jakarta Sans, Inter, sans-serif"
+    },
+    "roundness": "12px"
+  },
+  "screens": {
+    "home": {
+      "id": "7581ffe9bb3b4afe8b851a445ef405c2",
+      "title": "Rooftop London Cafe & Restaurant - Home",
+      "width": 2560,
+      "height": 13010,
+      "screenshotFile": "projects/14880444576187050178/files/6c7d6d29411e40439e719c1a8e01d133",
+      "htmlFile": "projects/14880444576187050178/files/31273464fff649ba97114d0d0f0b1033"
+    },
+    "menu": {
+      "id": "2e207b69d1dc418bb5dda29fc941a793",
+      "title": "Rooftop London - Digital Food Menu",
+      "width": 2560,
+      "height": 10830,
+      "screenshotFile": "projects/14880444576187050178/files/c7f0690530f54b3796e7f0191d5ce769",
+      "htmlFile": "projects/14880444576187050178/files/8938bd2b36c643e6bc1e12b312d51d6f"
+    },
+    "bookATable": {
+      "id": "9e9fd96cebd34088bd7289db64783aa8",
+      "title": "Rooftop London - Book a Table",
+      "width": 2560,
+      "height": 5046,
+      "screenshotFile": "projects/14880444576187050178/files/4c58b280f4a04ab2821ba843e6868795",
+      "htmlFile": "projects/14880444576187050178/files/4c5a1af2893445ff86c1dd5e0858d4d3"
+    }
+  }
+}

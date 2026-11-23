@@ -21,17 +21,18 @@ export function MenuCard({ item, onSelect }: MenuCardProps) {
   return (
     <div
       onClick={() => onSelect(item)}
-      className="group relative flex flex-col rounded-xl bg-[#1C1C1C] border border-[#2B2B2B] hover:border-[#C8A66A]/60 transition-all duration-300 overflow-hidden shadow-lg cursor-pointer hover:-translate-y-1"
+      className="group relative flex flex-col rounded-2xl bg-[#1C1C1C] border border-[#2B2B2B] hover:border-[#C8A66A]/60 transition-all duration-300 overflow-hidden shadow-lg cursor-pointer hover:-translate-y-1.5"
     >
       {/* Image Area */}
-      <div className="relative h-44 w-full bg-[#242424] overflow-hidden">
+      <div className="relative h-48 w-full bg-[#242424] overflow-hidden">
         <Image
-          src={item.image || '/images/food-1.svg'}
+          src={item.image || 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80'}
           alt={item.name}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-transparent to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/15 to-transparent opacity-90" />
 
         {/* Veg/Non-Veg Badge */}
         <div className="absolute top-3 left-3 flex items-center gap-2">
@@ -45,33 +46,33 @@ export function MenuCard({ item, onSelect }: MenuCardProps) {
         </div>
 
         {/* Price tag */}
-        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-[#151515]/95 border border-[#C8A66A]/40 text-[#C8A66A] font-bold text-sm">
+        <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#151515]/95 border border-[#C8A66A]/40 text-[#C8A66A] font-bold text-sm shadow-md">
           {formatPrice(item.price)}
         </div>
       </div>
 
       {/* Info Area */}
-      <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+      <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
         <div>
-          <h3 className="font-heading text-base font-bold text-[#F7F5F0] group-hover:text-[#C8A66A] transition-colors">
+          <h3 className="font-heading text-lg font-bold text-[#F7F5F0] group-hover:text-[#C8A66A] transition-colors leading-snug">
             {item.name}
           </h3>
-          <p className="text-xs text-[#A8A8A8] mt-1 line-clamp-2 leading-relaxed">
+          <p className="text-xs text-[#A8A8A8] mt-1.5 line-clamp-2 leading-relaxed">
             {item.description}
           </p>
         </div>
 
-        <div className="pt-2 border-t border-[#262626] flex items-center justify-between text-xs">
+        <div className="pt-3 border-t border-[#262626] flex items-center justify-between text-xs">
           <span className="text-[11px] text-[#888888] italic">*Sample price</span>
           <a
             href={whatsappUrl}
             onClick={(e) => e.stopPropagation()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#25D366] hover:underline"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#25D366] hover:underline"
           >
-            <MessageCircle className="w-3 h-3" />
-            Enquire
+            <MessageCircle className="w-3.5 h-3.5" />
+            Order Enquiry
           </a>
         </div>
       </div>

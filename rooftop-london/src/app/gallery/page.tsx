@@ -48,10 +48,10 @@ export default function GalleryPage() {
             Immerse yourself in the London-inspired ambience, open rooftop breezes, and celebratory gatherings at Trisulia, Cuttack.
           </p>
 
-          <div className="mt-4 p-3 rounded-xl bg-[#202020] border border-[#C8A66A]/30 text-xs text-[#C8A66A] inline-flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0" />
+          <div className="mt-4 px-4 py-2 rounded-full bg-[#1C1C1C] border border-[#C8A66A]/30 text-xs text-[#C8A66A] inline-flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#C8A66A] animate-pulse" />
             <span>
-              High-resolution photographs can be added and categorized via the owner admin dashboard.
+              Capturing Memorable Rooftop Evenings & Celebrations at Trisulia
             </span>
           </div>
         </div>

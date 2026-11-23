@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
+import { PublicLayoutWrapper } from '@/components/layout/PublicLayoutWrapper';
 import { ToastProvider } from '@/components/ui/Toast';
 import { RESTAURANT_INFO } from '@/lib/constants';
 
@@ -28,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'ROOFTOP LONDON CAFE & RESTAURANT',
     images: [
       {
-        url: '/images/hero-bg.svg',
+        url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
         width: 1200,
         height: 800,
         alt: 'Rooftop London Cafe & Restaurant rooftop dining view',
@@ -75,17 +73,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#151515] text-[#F7F5F0] antialiased selection:bg-[#C8A66A] selection:text-[#151515]">
+      <body className="min-h-screen flex flex-col bg-[#121212] text-[#F5F5F5] antialiased selection:bg-[#C8A66A] selection:text-[#121212]">
         <ToastProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsAppButton />
+          <PublicLayoutWrapper>{children}</PublicLayoutWrapper>
         </ToastProvider>
       </body>
     </html>

@@ -116,9 +116,10 @@ export default function CelebrationsPage() {
 
             <div className="relative h-72 sm:h-80 rounded-2xl overflow-hidden border border-[#C8A66A]/30">
               <Image
-                src="/images/celebrations.svg"
+                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80"
                 alt="Celebrations at Rooftop London"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
